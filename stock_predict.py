@@ -7,10 +7,11 @@ COMPANY_NAME = "Tesla Inc"
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-STOCK_APIKEY = "FZ67P1OXSMWGM1CA"
-NEWS_APIKEY = "6775b6d0aadc4ce7840f8849143f4a0e"
-account_sid = 'ACe5cc590310f6944545d5ef347f3f94a0'
-auth_token = '269118d2760bfd5a808eea1b6466842b'
+STOCK_APIKEY = "YOUR_STOCK_API_KEY"
+NEWS_APIKEY = "YOUR_NEWS_API_KEY"
+account_sid = 'YOUR_TWILIO_ACCOUNT_SID'
+auth_token = 'YOUR_TWILIO_AUTH_TOKEN'
+
 
 stock_params = {
     "function": "TIME_SERIES_DAILY_ADJUSTED",
@@ -61,13 +62,12 @@ if abs(diff_percentage) >= 1:
 
     client = Client(account_sid, auth_token)
     
-
-    #Optional TODO: Format the message like this: 
+    #add your number
     for article in formatted_article:
         message = client.messages.create(
-        from_='whatsapp:+14155238886',
+        from_='whatsapp: 000000000000',
         body=article,
-        to='whatsapp:+919835779832'
+        to='whatsapp:0000000000'
         )
 
 
